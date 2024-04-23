@@ -1,3 +1,13 @@
+drop schema if exists trabalho;
+
+drop user if exists 'user'@'localhost';
+
+create schema trabalho;
+
+create user 'user'@'localhost' identified by 'pass123';
+
+grant select, insert, delete, update on trabalho.* to user@'localhost';
+
 use trabalho;
 create table tra_trabalho (
  tra_id bigint primary key auto_increment,
